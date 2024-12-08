@@ -14,9 +14,7 @@ const DogLists = () => {
     if (!breed) return 'No description available.';
     return `${breed.name} is known for being ${
       breed.temperament || 'of unique temperament'
-    }. ${
-      breed.bred_for ? `Originally bred for ${breed.bred_for}.` : ''
-    } Lifespan: ${breed.life_span || 'Unknown.'}`;
+    }. ${breed.bred_for ? `Originally bred for ${breed.bred_for}.` : ''}`;
   };
 
   useEffect(() => {
@@ -35,7 +33,7 @@ const DogLists = () => {
       url.searchParams.append('mime_types', 'jpg');
       url.searchParams.append('format', 'json');
       url.searchParams.append('has_breeds', 'true');
-      url.searchParams.append('limit', '10');
+      url.searchParams.append('limit', '15');
 
       const requestOptions = {
         method: 'GET',

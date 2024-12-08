@@ -3,10 +3,13 @@ import { TiHeartOutline } from 'react-icons/ti';
 import { FaHeart } from 'react-icons/fa';
 import { GiSittingDog } from 'react-icons/gi';
 import { IoPawOutline } from 'react-icons/io5';
+import DogDetails from './DogDetails';
 const Dog = ({ dog, getDogDescription }) => {
   const [isLike, setIsLike] = useState(false);
+  const [showDetails, setShowDetails] = useState(false);
+
   return (
-    <article className="dog-container">
+    <article className="dog-container" onClick={() => setShowDetails(true)}>
       <div className="image-container">
         <img src={dog.url} alt={`Dog ${dog.id}`} loading="lazy" />
       </div>
@@ -48,6 +51,12 @@ const Dog = ({ dog, getDogDescription }) => {
           )}
         </div>
       </div>
+      <DogDetails
+        showDetails={showDetails}
+        setShowDetails={setShowDetails}
+        dog={dog}
+        getDogDescription={getDogDescription}
+      />
     </article>
   );
 };
