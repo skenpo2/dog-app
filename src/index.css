@@ -277,7 +277,7 @@ form .search-container {
   justify-content: space-between;
   flex-direction: column;
   gap: 0.5rem;
-  padding: 0 0.7rem 0.8rem 0.7rem;
+  padding: 0 1.2rem 1.2rem 1.2rem;
 }
 
 .overlay-info {
