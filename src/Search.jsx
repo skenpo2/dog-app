@@ -4,9 +4,14 @@ import { FaSearch } from 'react-icons/fa';
 const Search = () => {
   return (
     <form>
-      <FaSearch />
-      <input type="search" placeholder="Search for a breed" />
-      <button type="submit">Search</button>
+      <div className="search-container">
+        <FaSearch className="search-icon" />
+        <input
+          className="search"
+          type="search"
+          placeholder="Search for a breed"
+        />
+      </div>
     </form>
   );
 };

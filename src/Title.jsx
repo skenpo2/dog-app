@@ -1,10 +1,10 @@
 import React from 'react';
-import { FaDog } from 'react-icons/fa'; // Example for a FontAwesome dog icon
+import { FaShieldDog } from 'react-icons/fa6';
 
 const Title = () => {
   return (
     <header>
-      {<FaDog className="logo" />}
+      {<FaShieldDog className="logo" />}
       <h1>Furever Friends</h1>
     </header>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaRegHeart } from 'react-icons/fa';
+import { TiHeartOutline } from 'react-icons/ti';
 import { FaHeart } from 'react-icons/fa';
 import { GiSittingDog } from 'react-icons/gi';
 import { IoPawOutline } from 'react-icons/io5';
@@ -28,10 +28,10 @@ const Dog = ({ dog, getDogDescription }) => {
                 <GiSittingDog className="sitting-dog" />
                 {dog.breeds[0].breed_group || 'Not Available'}
               </p>
-              <p className="temperament">
+              {/* <p className="temperament">
                 <div className="span-class">Temperament</div>{' '}
                 {dog.breeds[0].temperament}
-              </p>
+              </p> */}
             </div>
           ) : (
             <div className="span-class">Breed information not available</div>
@@ -41,7 +41,7 @@ const Dog = ({ dog, getDogDescription }) => {
           {isLike ? (
             <FaHeart className="like-icon" onClick={() => setIsLike(!isLike)} />
           ) : (
-            <FaRegHeart
+            <TiHeartOutline
               className="like-icon"
               onClick={() => setIsLike(!isLike)}
             />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Dog from './Dog';
 import Search from './Search';
 import Loading from './Loading';
+import Title from './Title';
 
 const DogLists = () => {
   const [dogs, setDogs] = useState([]);
@@ -70,9 +71,8 @@ const DogLists = () => {
 
   return (
     <section className="container">
-      <div className="search-container">
-        <Search />
-      </div>
+      <Title />
+      <Search />
       <div className="dogs-container">
         {dogs.map((dog) => (
           <Dog key={dog.id} dog={dog} getDogDescription={getDogDescription} />

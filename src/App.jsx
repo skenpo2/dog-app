@@ -6,7 +6,6 @@ import DogLists from './DogLists';
 const App = () => {
   return (
     <main>
-      <Title />
       <DogLists />
     </main>
   );
