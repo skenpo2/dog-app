@@ -42,11 +42,20 @@ const Dog = ({ dog, getDogDescription }) => {
         </div>
         <div className="like">
           {isLike ? (
-            <FaHeart className="like-icon" onClick={() => setIsLike(!isLike)} />
+            <FaHeart
+              className="like-icon"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsLike(!isLike);
+              }}
+            />
           ) : (
             <TiHeartOutline
               className="like-icon"
-              onClick={() => setIsLike(!isLike)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsLike(!isLike);
+              }}
             />
           )}
         </div>
